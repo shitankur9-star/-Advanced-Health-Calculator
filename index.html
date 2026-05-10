@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Advanced Health Calculator</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- CHART JS -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+  <!-- DARK MODE BUTTON -->
+  <button class="dark-btn" onclick="toggleDarkMode()">
+    <i class="fa-solid fa-moon"></i>
+  </button>
+
+  <div class="container">
+
+    <h1>💪 Advanced Health Calculator</h1>
+
+    <!-- BMI SECTION -->
+    <div class="card">
+
+      <h2>BMI Calculator</h2>
+
+      <input type="number" id="height" placeholder="Height (cm)">
+      <input type="number" id="weight" placeholder="Weight (kg)">
+
+      <button onclick="calculateBMI()">
+        Calculate BMI
+      </button>
+
+      <h3 id="bmiResult"></h3>
+
+    </div>
+
+    <!-- WATER SECTION -->
+    <div class="card">
+
+      <h2>💧 Water Intake Calculator</h2>
+
+      <input type="number" id="waterWeight" placeholder="Weight (kg)">
+
+      <button onclick="calculateWater()">
+        Calculate Water Intake
+      </button>
+
+      <h3 id="waterResult"></h3>
+
+    </div>
+
+    <!-- CALORIE SECTION -->
+    <div class="card">
+
+      <h2>🔥 Calorie Estimator</h2>
+
+      <input type="number" id="age" placeholder="Age">
+      <input type="number" id="calWeight" placeholder="Weight (kg)">
+      <input type="number" id="heightCal" placeholder="Height (cm)">
+
+      <select id="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+
+      <button onclick="calculateCalories()">
+        Estimate Calories
+      </button>
+
+      <h3 id="calorieResult"></h3>
+
+    </div>
+
+    <!-- HEALTH TIPS -->
+    <div class="card">
+
+      <h2>🧠 AI Health Tips</h2>
+
+      <button onclick="generateTip()">
+        Generate Health Tip
+      </button>
+
+      <h3 id="tipResult"></h3>
+
+    </div>
+
+    <!-- BMI CHART -->
+    <div class="card">
+
+      <h2>📊 BMI Chart</h2>
+
+      <canvas id="bmiChart"></canvas>
+
+    </div>
+
+    <!-- HISTORY -->
+    <div class="card">
+
+      <h2>📜 BMI History</h2>
+
+      <ul id="historyList"></ul>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
